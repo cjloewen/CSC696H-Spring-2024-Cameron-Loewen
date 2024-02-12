@@ -11,3 +11,16 @@ Other pitfalls include: how do we know the threshold will be good enough or just
 How do we know the statistics are actually good
 Even with statistics the curse of dimensionality still exists
 It's bayesian and has assumptions/oversimplistic priors (is this an issue, I definitely don't know).
+
+
+
+2/12/24 - Fast Epsilon-free inference of Simulation Models with Bayesian Conditional Density Estimation
+After reading the paper closely, I still do not understand what Bayesian Conditional Density is.
+I am assuming it has to do with proposition 1.
+This paper was easier to read than the one due on wednesday (the one I have to present), and explained the math or at least gave a resource to understanding the math. However, some of the intution was difficult to follow as well as the presentation of the results/experiments. Proposition 1, which was the basis of the entire theory, should have been explained better and also what the downsides are.
+It would seem that even though in the limit, this is true, in most practical applications, how close will it be, and how can we be assured that an MDN will get close enough to the true posterior.
+In other words, with all this compounding uncertainty, how does it compare with just using an epsilon approximation in ABC.
+
+The two algorithms also needed to be introduced better as well as their initialization better explained.
+
+2/14/24 - do I have to write a report on this too?
