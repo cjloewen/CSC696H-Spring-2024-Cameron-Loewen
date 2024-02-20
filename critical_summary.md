@@ -23,4 +23,8 @@ In other words, with all this compounding uncertainty, how does it compare with 
 
 The two algorithms also needed to be introduced better as well as their initialization better explained.
 
-2/14/24 - do I have to write a report on this too?
+2/19/24 - Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning
+I thought the paper was simpler to read due to everything being pushed out to the appendix. That being said, I can't say I fully followed the math because of this decision. I also thought that all the dependencies being pushed away made it harder to follow and without much of the basics introduced I found it hard to understand what exactly they were doing and how it worked. I think the figures also could have been made easier to follow and understand.
+Overall, I think I should have spent more time to read the paper and follow it better so I could at least ask questions on it.
+
+2/21/24
