@@ -23,8 +23,19 @@ In other words, with all this compounding uncertainty, how does it compare with 
 
 The two algorithms also needed to be introduced better as well as their initialization better explained.
 
+2/14/24 - my presentation, don't have to write about this one.
+
 2/19/24 - Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning
 I thought the paper was simpler to read due to everything being pushed out to the appendix. That being said, I can't say I fully followed the math because of this decision. I also thought that all the dependencies being pushed away made it harder to follow and without much of the basics introduced I found it hard to understand what exactly they were doing and how it worked. I think the figures also could have been made easier to follow and understand.
 Overall, I think I should have spent more time to read the paper and follow it better so I could at least ask questions on it.
 
-2/21/24
+2/21/24 - 
+
+2/28/24 - Missed this Talk
+
+3/1/24 - Infogan
+
+3/11/24 - Information Dropout: Learning Optimal Representations Through Noisy Computation
+I thought this paper's goal was a little unclear because of how many goals were presented. It appeared almost to be a synthesis of too many different papers.
+What I mean is that it appeared to be the same as variational dropout at the endpoint yet with an added regularizer from another paper that was supposed to enforce to enforce disentanglement. Of course, the authors may have just been modest by saying their paper was a "small step" in exploring the relationship between information theory and deep learning.
+I am not very familiar with information theory (hopefully will be soon), so some of the math was hard to get through, but I appreciated the way the paper was laid out and how clear their steps were in a logistic manner. However, I did find a run-on sentence that was half a paragraph long and I am surprised no one told them to break it up.
