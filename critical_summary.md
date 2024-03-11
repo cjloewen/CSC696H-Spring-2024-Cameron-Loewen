@@ -37,6 +37,10 @@ Most of the paper focused on being able to parallelize and simplify the computat
 2/28/24 - Missed this Talk
 
 3/1/24 - Infogan
+I was unfamiliar with the GAN model prior to reading it, but the paper did a decent job explaining it at a thorough enough level to understand the point. The math was difficult to follow due to not being introduced to the GAN objective prior to reading. While I understood the objective and the importance of being able to disentangle features, I was unsure of how well the paper actually was able to disentangle or how easily it could.
+
+The paper was able to optimize a mutual information between the generated output and latent variables based on the lower bound and had ties to bayesian inference. This was essentially being able to coerce the model into accepting different distributions as the natural distributions of independent features of the data. This is where the issue I have with the model comes in, how complicated do you have to make these distributions, and how many times do you have to train it or tinker with it until it spits out an acceptable model. Specifically, is choosing latent variable distributions and numbers become a hyperparameter, can it be learnable? - This kind of reminds me of unsupervised learning with k clusters, k is a hyperparameter.
+
 
 3/11/24 - Information Dropout: Learning Optimal Representations Through Noisy Computation
 I thought this paper's goal was a little unclear because of how many goals were presented. It appeared almost to be a synthesis of too many different papers.
