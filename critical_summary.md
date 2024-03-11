@@ -29,7 +29,10 @@ The two algorithms also needed to be introduced better as well as their initiali
 I thought the paper was simpler to read due to everything being pushed out to the appendix. That being said, I can't say I fully followed the math because of this decision. I also thought that all the dependencies being pushed away made it harder to follow and without much of the basics introduced I found it hard to understand what exactly they were doing and how it worked. I think the figures also could have been made easier to follow and understand.
 Overall, I think I should have spent more time to read the paper and follow it better so I could at least ask questions on it.
 
-2/21/24 - 
+2/21/24 - Variational Dropout and the Local Reparameterization Trick
+The paper extends on the idea of gaussian dropout. The paper explains that it generalizes this concept in order to be more flexible and have a bayesian inference approach. This allows the dropout weights to be learned rather than inferred or predetermined. Interestingly, there are really only empirical justifications for doing this rather than theory, so I am unsure of if this is sound, especially since they also varied the variational lower bound.
+
+Most of the paper focused on being able to parallelize and simplify the computation both for speed and to limit the variance in the output. I did not really follow all the math, the presentation did help a lot. Overall, I thought the math manipulations for the efficiency of the computation were very impressive and made the approach very feasible even without full theoretical backing.
 
 2/28/24 - Missed this Talk
 
