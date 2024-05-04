@@ -132,7 +132,7 @@ def runAllExperiments():
 def formatToTable():
     for epochs in epoch_list:
         for meanFunc in funcs:
-            results = utility.readIn(f"{epochs}_{dictNames[meanFunc]}.txt")
+            results = utility.readIn(f"small_sample_{epochs}_{dictNames[meanFunc]}.txt")
             print(epochs, dictNames[meanFunc])
             for x in results.keys():
                 print(x[0], x[1], results[x][0][0], results[x][0][1], results[x][1][1], results[x][2][0], results[x][2][0], sep=" & ", end="\\\\\n")
@@ -153,10 +153,10 @@ def getMins(name='zero'):
                 cur_diff = results[x][0][1]
                 if(cur_diff < min_avg_diff):
                     min_avg_diff = cur_diff
-                    diff_exp = (epochs, dictNames[meanFunc], x)
+                    diff_exp = (epochs, dictNames[meanFunc], x, results[x])
                 if(cur_kl < min_avg_kl):
                     min_avg_kl = cur_kl
-                    kl_exp = (epochs, dictNames[meanFunc], x)
+                    kl_exp = (epochs, dictNames[meanFunc], x, results[x])
     print(f"Lowest Avg kl: {min_avg_kl}, achieved by {kl_exp}")
     print(f"Lowest Avg diff: {min_avg_diff}, achieved by {diff_exp}")
                 
@@ -165,13 +165,13 @@ def recordModel(config, epochs, func):
     testInput = sampleExample(200, -2, 2)
     testInput, _ = list(testInput.batch(200))[0]
     testOutputs = []
+    stats, network = experiment(func, 1, 100, 100, "sigmoid", epochs, config)
     for i in range(100):
-        stats, network = experiment(func, 1, 100, 100, "sigmoid", epochs, config)
         testOutputs.append(network.makePredictions(testInput))
-    utility.writeFunction(testInput, testOutputs, "test_1_func.txt")
+    utility.writeFunction(testInput, testOutputs, f"{epochs}_{dictNames[func]}_func.txt")
             
-def graphModel():
-    x, y = readFunction("demo1_1_func.txt")
+def graphModel(config, epochs, func):
+    x, y = utility.readFunction(f"{epochs}_{dictNames[func]}_func.txt")
     plt.figure(figsize=(12, 8))
     for i in range(10):
         plt.plot(x, y[i], linestyle='-', marker='o', markersize=3)
@@ -193,5 +193,8 @@ fun5 =  lambda x: np.sin(4*np.pi*x) * np.log(x + 1.1)
 dictNames = {fun1: "zero", fun2: "line", fun3: "sine", fun4: "cube", fun5: "good"}
 
 epoch_list = [10, 50, 300]
-funcs = [fun1, fun2, fun3, fun4, fun5]
-formatToTable()
+funcs = [fun1, fun2]
+
+
+graphModel([[16],[2]], 10, fun1)
+graphModel([[4],[3]], 50, fun1)
